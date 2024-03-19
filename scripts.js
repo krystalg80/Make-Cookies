@@ -182,7 +182,7 @@ buyFacility.addEventListener("click", function() {
     autoFacilityStart();
     //refresh shop item
     refreshFacility();
-    
+
     facilityPower += 600 + Math.floor(facilityLevelNumber * 1.33);;
   }
 })
@@ -200,3 +200,15 @@ let refreshFacility = function() {
     facilityPrice.innerHTML = facilityPriceAmount;
     facilityMultiple.innerHTML = facilityPower - 600;
   }
+
+/********************************
+
+          Restart!
+
+********************************/
+let restartButton = document.getElementById('restart');
+
+restartButton.addEventListener("click", function() {
+    cookies = 0;
+    cookieCounter.textContent = cookies;
+  });
